@@ -1,45 +1,41 @@
 'use strict';
+
 var app = app || {};
 
 (function(module) {
 
 // the game
+  let selectorView = {};
 
-let selectorView = {};
+  selectorView.init = () => {
+    $('.container').hide();
+    $('#selector-view').fadeIn('slow');
+    selectorView.randomPic();
+  };
 
-selectorView.init = () => {
-  $('.container').hide();
-  $('#selector-view').fadeIn('slow');
-}
+  $('#images-wrapper').on('click', event => {
+    if (event.target.id === 'images-wrapper') return alert('Invalid selection');
 
+  });
 
-// const render = function(breeds) {
-//   let template = Handlebars.compile($('#selector-template').text());
-//   breeds.findBreed();
+  selectorView.generateRandom = () => {
+    return Math.floor(Math.random() * module.Breed.all.length);
+  };
 
-//   return template(breeds);
-// }
-
-selectorView.generateRandom = () => {
-  return Math.floor(Math.random() * Breeds.all.length)
-}
-
-selectorView.randomBreeds = [];
-selectorView.randomPic = () => {
-  while(selectorView.randomBreeds.length < 40) {
-    let randomNum = selectorView.generateRandom();
-    while(!selectorView.randomBreeds.includes(randomNum)) {
-      selectorView.randomBreeds.push(randomNum);
+  selectorView.randomBreeds = [];
+  selectorView.randomPic = () => {
+    while(selectorView.randomBreeds.length < 5) {
+      let randomNum = selectorView.generateRandom();
+      while(!selectorView.randomBreeds.includes(randomNum)) {
+        selectorView.randomBreeds.push(randomNum);
+      }
     }
-  }
-}
+    console.log(selectorView.randomBreeds);
+    let tempLeft = selectorView.randomBreeds.shift();
+    let tempRight = selectorView.randomBreeds.shift();
+    $('.dog-left').attr('src', module.Breed.all[tempLeft].message);
+    $('.dog-right').attr('src', module.Breed.all[tempRight].message);
+  };
 
-selectorView.index = function(breeds) {
-  $('#selector-view').show().siblings().hide();
-  for (let i = 0; i < 2; i ++) {
-    let temp = randomBreeds.shift();
-    $('#images-wrapper').append(breeds[temp]);
-  }
-}
-module.selectorView = selectorView;
+  module.selectorView = selectorView;
 })(app);

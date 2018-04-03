@@ -14,10 +14,6 @@
   <!-- Find a favicon -->
   <!-- Put in a preview (open graph meta tags) -->
   <!-- Create Handlebars here -->
-  <script id="selector-template" type="text/x-handlebars-template">
-    <li class="dog"><img src="{{message}}"></li>
-    <li class+"dog-right"><img src="{{message}}"></li>
-  </script>
 </head>
 <body>
   <header>
@@ -33,14 +29,19 @@
     </nav>
   </header>
   <main>
-    <section id="home-view"></section>
-    <section id="selector-view">
-        <h2>Breed Selector</h2>
-        <ul id="images-wrapper"></ul>
+    <section id="home-view" class="container">
+      <a href="/breed-selector"><button id="selector-view-button" type="button">Breed Selector</button></a>
     </section>
-    <section id="results-view"></section>
-    <section id="matches-view"></section>
-    <section id="about-view"></section>
+    <section id="selector-view" class="container">
+        <h2>Breed Selector</h2>
+        <ul id="images-wrapper">
+          <li><img class="dog-left" src=""></li>
+          <li><img class="dog-right" src=""></li>
+        </ul>
+    </section>
+    <section id="results-view" class="container"></section>
+    <section id="matches-view" class="container"></section>
+    <section id="about-view" class="container"></section>
     </main>
 
   <footer>
@@ -50,26 +51,25 @@
   </footer>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
-  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  
   <script src="scripts/models/breed.js"></script>
   <script src="scripts/models/dogs.js"></script>
 
+  <script src="scripts/views/selector-view.js"></script>
   <script src="scripts/views/home-view.js"></script>
   <script src="scripts/views/about-view.js"></script>
   <script src="scripts/views/admin-view.js"></script>
   <script src="scripts/views/matches-view.js"></script>
   <script src="scripts/views/results-view.js"></script>
-  <script src="scripts/views/selector-view.js"></script>
 
   <script src="scripts/controllers/routes.js"></script>
 
   <script>
-    Breeds.fetchAll();
-    // selectorView.randomPic();
-    // selectorView.index(Breeds.all);
+
   </script>
 </body>
 
