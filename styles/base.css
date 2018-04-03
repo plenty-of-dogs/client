@@ -3,6 +3,10 @@
   outline: 1px dashed red;
 }
 
+/* img {
+  width: 40%;
+} */
+
 body {
   background: linear-gradient(to bottom right, #77C9D4,#57BC90);
   height: 100%;
@@ -54,8 +58,7 @@ body {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
+  position: relative;
   height: 75px;
   width: 100%;
   background-color: #F9D059

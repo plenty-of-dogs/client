@@ -1,8 +1,15 @@
-'use strict'; 
+'use strict';
+
+if(window.location.pathname !== '/') {
+  page.base('/client');
+}
 
 //endpoints
 
-page('/', ctx => module.Breeds.fetchAll(module.selectorView.init));
-
+page('/', app.homeView.init);
+page('/breed-selector', ctx => {
+  app.loadView.init();
+  app.Breed.fetchAll(75);
+});
 
 page();

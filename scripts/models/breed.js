@@ -3,34 +3,37 @@ var app = app || {};
 
 (function(module) {
 
-Breeds.all = [];
-Breeds.allRandom = [];
-
-
-//setting up the random images
-function Breeds (rawDataObj) {
-  this.rawDataObj = rawDataObj;
-  this.votes = 0;
-  this.previous = false;
-  this.findBreed();
-  Breeds.all.push(this);
-}
-
-Breeds.prototype.findBreed = function() {
-  this.breed = this.message.match(/img[\\\/](\w+)/)[1];
-};
-
-Breeds.fetchAll = callback => {
-  for (let i = 0; i < 40; i ++) {
-    Breeds.fetchRandom();
+  //setting up the random images
+  function Breed (rawDataObj) {
+    this.url = rawDataObj.message;
+    this.previous = false;
   }
-  Breeds.loadAll(Breeds.allRandom);
-}
 
-// This is getting a random dog picture
-Breeds.fetchRandom = callback => {
-  $.get('https://dog.ceo/api/breeds/image/random')
-  .then(results => Breeds.allRandom.push(results));
-}
-module.Breeds = Breeds;
+  Breed.all = [];
+
+  // Breed.loadAll = dogData => {
+  //   Breed.all = dogData.map(x => new Breed(x));
+  //   return Breed.all;
+  // };
+
+  // This retreives all dog-breed pics.
+  Breed.fetchAll = limit => {
+    if (localStorage.randomDogImages) {
+      Breed.all = JSON.parse(localStorage.getItem('randomDogImages'));
+      module.selectorView.init();
+    } else if (limit > 0) {
+      $.get('https://dog.ceo/api/breeds/image/random')
+        .then(results => {
+          Breed.all.push(results);
+          Breed.fetchAll(limit - 1);
+        });
+    } else {
+      localStorage.setItem('randomDogImages', JSON.stringify(Breed.all));
+      module.selectorView.init();
+    }
+  };
+
+
+
+  module.Breed = Breed;
 })(app);

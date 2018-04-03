@@ -15,6 +15,14 @@
   display: block;
 } 
 
+#images-wrapper {
+  
+}
+
+#images-wrapper li {
+  display: inline-block;
+}
+
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
