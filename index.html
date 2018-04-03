@@ -21,10 +21,10 @@
     <nav class="main-nav" >
       <div class="icon-menu" onclick="void(0)" ></div>
       <ul>
-        <li><a class="icon-home2" href="/"></a>  Home</li>
-        <li><a class="icon-checkbox-checked" href="/breed-selector"></a>  Breed Selector</li>
-        <li><a class="icon-paw" href="/results"></a>  Results</li>
-        <li><a class="icon-heart" href="/matches"></a>  Matches</li>
+        <li><a class="icon-home2" href="/">  Home</a></li>
+        <li><a class="icon-checkbox-checked" href="/breed-selector">  Breed Selector</a></li>
+        <li><a class="icon-paw" href="/results">  Results</a></li>
+        <li><a class="icon-heart" href="/matches">  Matches</a></li>
       </ul>
     </nav>
   </header>
@@ -32,14 +32,20 @@
     <section id="home-view" class="container">
       <a href="/breed-selector"><button id="selector-view-button" type="button">Breed Selector</button></a>
     </section>
+    <section id="load-view" class="container">
+      <h2>Loading Best Friends...</h2>
+      <iframe src="https://giphy.com/embed/B2vBunhgt9Pc4" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dogs-think-turtles-B2vBunhgt9Pc4">via GIPHY</a></p>
+    </section>
     <section id="selector-view" class="container">
         <h2>Breed Selector</h2>
+        <p class="clicks"></p>
         <ul id="images-wrapper">
           <li><img class="dog-left" src=""></li>
           <li><img class="dog-right" src=""></li>
         </ul>
     </section>
-    <section id="results-view" class="container"></section>
+    <section id="results-view" class="container">
+    </section>
     <section id="matches-view" class="container"></section>
     <section id="about-view" class="container"></section>
     </main>
@@ -59,8 +65,9 @@
   <script src="scripts/models/breed.js"></script>
   <script src="scripts/models/dogs.js"></script>
 
-  <script src="scripts/views/selector-view.js"></script>
   <script src="scripts/views/home-view.js"></script>
+  <script src="scripts/views/load-view.js"></script>
+  <script src="scripts/views/selector-view.js"></script>
   <script src="scripts/views/about-view.js"></script>
   <script src="scripts/views/admin-view.js"></script>
   <script src="scripts/views/matches-view.js"></script>

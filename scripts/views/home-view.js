@@ -5,14 +5,27 @@ var app = app || {};
 (function(module) {
 
   let homeView = {};
+  homeView.voteCounter = [];
 
   homeView.init = () => {
     $('.container').hide();
     $('#home-view').fadeIn('slow');
-    console.log('homeview?');
+    if (localStorage.voteCounter) {
+      homeView.voteCounter = JSON.parse(localStorage.getItem('voteCounter'));
+    } else {
+      $.get('https://dog.ceo/api/breeds/list')
+        .then(results => {
+          results.message.forEach(x => {
+            homeView.voteCounter.push(
+              {
+                breed: x,
+                vote: 0
+              }
+            );
+          });
+        });
+    }
   };
-
-  // $('#selector-view-button').on('click', );
 
   module.homeView = homeView;
 })(app);

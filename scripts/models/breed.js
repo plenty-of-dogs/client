@@ -11,10 +11,6 @@ var app = app || {};
 
   Breed.all = [];
 
-  Breed.prototype.findBreedName = function() {
-    this.breedName = this.message.match(/img[\\\/](\w+)/)[1];
-  };
-
   // Breed.loadAll = dogData => {
   //   Breed.all = dogData.map(x => new Breed(x));
   //   return Breed.all;
@@ -22,14 +18,17 @@ var app = app || {};
 
   // This retreives all dog-breed pics.
   Breed.fetchAll = limit => {
-    console.log("fetchall?");
-    if (limit > 0) {
+    if (localStorage.randomDogImages) {
+      Breed.all = JSON.parse(localStorage.getItem('randomDogImages'));
+      module.selectorView.init();
+    } else if (limit > 0) {
       $.get('https://dog.ceo/api/breeds/image/random')
         .then(results => {
           Breed.all.push(results);
           Breed.fetchAll(limit - 1);
         });
     } else {
+      localStorage.setItem('randomDogImages', JSON.stringify(Breed.all));
       module.selectorView.init();
     }
   };

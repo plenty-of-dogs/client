@@ -58,8 +58,7 @@ body {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
+  position: relative;
   height: 75px;
   width: 100%;
   background-color: #F9D059

@@ -7,6 +7,9 @@ if(window.location.pathname !== '/') {
 //endpoints
 
 page('/', app.homeView.init);
-page('/breed-selector', ctx => app.Breed.fetchAll(10));
+page('/breed-selector', ctx => {
+  app.loadView.init();
+  app.Breed.fetchAll(75);
+});
 
 page();

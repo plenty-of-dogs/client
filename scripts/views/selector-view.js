@@ -6,17 +6,34 @@ var app = app || {};
 
 // the game
   let selectorView = {};
+  selectorView.gameCounter = 5;
+  selectorView.clickCounter = 0;
 
   selectorView.init = () => {
     $('.container').hide();
     $('#selector-view').fadeIn('slow');
     selectorView.randomPic();
+    $('.clicks').empty();
+    $('.clicks').append(`Round ${selectorView.clickCounter + 1}/${selectorView.gameCounter}`);
   };
-
   $('#images-wrapper').on('click', event => {
+    selectorView.clickCounter += 1;
+    $('.clicks').empty();
+    $('.clicks').append(`Round ${selectorView.clickCounter + 1}/${selectorView.gameCounter}`);
     if (event.target.id === 'images-wrapper') return alert('Invalid selection');
-
+    // console.log(event.target.src);
+    let matchedBreed = event.target.src.match(/img\/(\w+)/)[1];
+    // console.log(matchedBreed);
+    module.homeView.voteCounter.forEach(x => {
+      if (x.breed === matchedBreed) x.vote += 1;
+    });
+    if (selectorView.clickCounter === selectorView.gameCounter) {
+      selectorView.clickCounter = 0;
+      module.resultsView.init();
+    }
+    selectorView.randomPic();
   });
+
 
   selectorView.generateRandom = () => {
     return Math.floor(Math.random() * module.Breed.all.length);
@@ -24,7 +41,7 @@ var app = app || {};
 
   selectorView.randomBreeds = [];
   selectorView.randomPic = () => {
-    while(selectorView.randomBreeds.length < 5) {
+    while(selectorView.randomBreeds.length < 3) {
       let randomNum = selectorView.generateRandom();
       while(!selectorView.randomBreeds.includes(randomNum)) {
         selectorView.randomBreeds.push(randomNum);
