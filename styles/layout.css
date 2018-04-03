@@ -1,0 +1,28 @@
+
+.icon-menu {
+  float: right;
+  font-size: 4em;
+  position: absolute;
+  top: 0em;
+  right: 0em;
+}
+
+.main-nav ul {
+  display: none;
+}
+
+.main-nav:hover ul {
+  display: block;
+} 
+
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+  .main-nav ul {
+    display: block;
+  }
+  .main-nav ul li {
+    display: inline;
+  }
+}
