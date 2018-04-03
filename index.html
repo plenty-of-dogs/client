@@ -5,55 +5,62 @@
   <title>Plenty of Dogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/styles/vendor/normalize.css">
-  <link rel="stylesheet" href="/styles/icons.css">
-  <link rel="stylesheet" href="/styles/base.css">
-  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="styles/vendor/normalize.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
   <!-- Include module stylesheets here -->
   <!-- Find a favicon -->
   <!-- Put in a preview (open graph meta tags) -->
   <!-- Create Handlebars here -->
+  <script id="selector-template" type="text/x-handlebars-template">
+    <li class="dog"><img src="{{message}}"></li>
+    <li class+"dog-right"><img src="{{message}}"></li>
+  </script>
 </head>
 <body>
   <header>
-
+    
   </header>
   
   <main>
     <section id="home-view"></section>
     <section id="selector-view">
-      <h2>Breed Selector</h2>
-      <ul id="images-wrapper">
-        <li class="left-dog"></li>
-        <li class="right-dog"></li>
-      </ul>
+        <h2>Breed Selector</h2>
+        <ul id="images-wrapper"></ul>
     </section>
     <section id="results-view"></section>
     <section id="matches-view"></section>
     <section id="about-view"></section>
-  </main>
+    </main>
 
   <footer>
 
   </footer>
   
-  <script src="hhtps://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-  <script src="/scripts/models/breed.js"></script>
-  <script src="/scripts/models/dogs.js"></script>
+  <script src="scripts/models/breed.js"></script>
+  <script src="scripts/models/dogs.js"></script>
 
-  <script src="/scripts/views/home-view.js"></script>
-  <script src="/scripts/views/about-view.js"></script>
-  <script src="/scripts/views/admin-view.js"></script>
-  <script src="/scripts/views/matches-view.js"></script>
-  <script src="/scripts/views/results-view.js"></script>
-  <script src="/scripts/views/selector-view.js"></script>
+  <script src="scripts/views/home-view.js"></script>
+  <script src="scripts/views/about-view.js"></script>
+  <script src="scripts/views/admin-view.js"></script>
+  <script src="scripts/views/matches-view.js"></script>
+  <script src="scripts/views/results-view.js"></script>
+  <script src="scripts/views/selector-view.js"></script>
 
-  <script src="/scrpts/controllers/routes.js"></script>
+  <script src="scripts/controllers/routes.js"></script>
 
+
+  <script>
+    Breeds.fetchAll();
+    // selectorView.randomPic();
+    // selectorView.index(Breeds.all);
+  </script>
 </body>
 
 </html>
