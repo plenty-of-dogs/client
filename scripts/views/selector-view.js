@@ -21,9 +21,7 @@ var app = app || {};
     $('.clicks').empty();
     $('.clicks').append(`Round ${selectorView.clickCounter + 1}/${selectorView.gameCounter}`);
     if (event.target.id === 'images-wrapper') return alert('Invalid selection');
-    // console.log(event.target.src);
     let matchedBreed = event.target.src.match(/img\/(\w+)/)[1];
-    // console.log(matchedBreed);
     module.homeView.voteCounter.forEach(x => {
       if (x.breed === matchedBreed) x.vote += 1;
     });
@@ -47,7 +45,6 @@ var app = app || {};
         selectorView.randomBreeds.push(randomNum);
       }
     }
-    console.log(selectorView.randomBreeds);
     let tempLeft = selectorView.randomBreeds.shift();
     let tempRight = selectorView.randomBreeds.shift();
     $('.dog-left').attr('src', module.Breed.all[tempLeft].message);

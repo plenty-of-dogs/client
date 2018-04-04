@@ -11,6 +11,7 @@ var app = app || {};
     $('.container').hide();
     $('#home-view').fadeIn('slow');
     if (localStorage.voteCounter) {
+      homeView.voteCounter = [];
       homeView.voteCounter = JSON.parse(localStorage.getItem('voteCounter'));
     } else {
       $.get('https://dog.ceo/api/breeds/list')

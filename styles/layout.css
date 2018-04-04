@@ -1,7 +1,6 @@
-
 .icon-menu {
   float: right;
-  font-size: 4em;
+  font-size: 3em;
   position: absolute;
   top: 0em;
   right: 0em;
@@ -11,16 +10,20 @@
   display: none;
 }
 
-.main-nav:hover ul {
-  display: block;
-} 
-
-#images-wrapper {
-  
+#icon-menu:hover ~ ul {
+  display: none;
 }
+
+.main-nav:focus ul,
+.main-nav:hover ul {
+  display: inherit;
+} 
 
 #images-wrapper li {
   display: inline-block;
+  margin-left: 10vw;
+  width: 80%;
+  padding-bottom: 2vw;
 }
 
 @media only screen and (min-width: 640px) {
@@ -32,5 +35,6 @@
   }
   .main-nav ul li {
     display: inline;
+    font-size: 1.5em;
   }
 }

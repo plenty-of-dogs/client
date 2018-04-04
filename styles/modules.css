@@ -1,0 +1,56 @@
+/************************* Selector View *************************/
+#selector-view {
+    text-align: center;
+}
+
+#selector-view img {
+    width: 100%;
+    max-height: 80vw;
+    margin-bottom: 2vw;
+    border: 2vw groove #f95759;
+    box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
+    min-width: 260px;
+}
+
+#images-wrapper li {
+    display: inline-block;
+    width: 80%;
+    margin-right: 10vw;
+    padding-bottom: 2vw;
+  }
+
+
+/************************* Results View *************************/
+#results-view {
+    text-align: center;
+}
+
+#results-view img {
+    width: 80%;
+    margin-bottom: 10vw;
+    border: 2vw groove #f95759;
+    box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
+    min-width: 260px;
+  }
+
+#results-view p {
+    font-size: 2em;
+    margin: 3.5em 0;
+}
+
+#results-view h2 {
+    margin-bottom: 2vw;
+    text-decoration: underline;
+}
+
+#results-view button {
+    border: 0.5vw solid #f95759;
+    padding: 0.5em;
+    border-radius: 50%;
+    box-shadow: 1vw 1vw 0.5vw 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 7vw;
+}
+#results-view a {
+    font-size: 2em;
+    min-width: 40%;
+}
