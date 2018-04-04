@@ -11,17 +11,10 @@ ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
 (function(module) {
 
   //setting up the random images
-  function Breed (rawDataObj) {
-    this.url = rawDataObj.message;
-    this.previous = false;
+  function Breed () {
   }
 
   Breed.all = [];
-
-  // Breed.loadAll = dogData => {
-  //   Breed.all = dogData.map(x => new Breed(x));
-  //   return Breed.all;
-  // };
 
   // This retreives all dog-breed pics.
   Breed.fetchAll = limit => {
