@@ -12,6 +12,24 @@
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky">
+  <script id="matches-view-template" type="text/x-handlebars-template">
+    <article class="match">
+      <!-- carousel of images -->
+      <h1>{{name}}</h1>
+      <h2>{{breed}}</h2>
+      <div class="details-view">
+        <ul>
+          <li>{{age}}</li>
+          <li>{{sex}}</li>
+          <li>{{size}}</li>
+        </ul>
+        <h2>About</h2>
+        <p>{{description}}</p>
+        <h2>Contact Info</h2>
+        <ul class="{{shelterId}}"></ul>
+      </div>
+    </article>
+  </script>
   <!-- Include module stylesheets here -->
   <!-- Find a favicon -->
   <!-- Put in a preview (open graph meta tags) -->
