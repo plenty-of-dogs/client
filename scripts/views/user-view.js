@@ -14,6 +14,11 @@ var app = app || {};
   userView.init = () => {
     $('.container').hide();
     $('#user-view').fadeIn('slow');
+    $('login-form').on('submit', function(event) {
+      event.preventDefault();
+      let token = event.target.passphrase.value;
+      
+    })
   };
 
   module.userView = userView;
