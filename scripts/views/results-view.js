@@ -14,12 +14,13 @@ var app = app || {};
     // $('#results-view').text(`${resultsView.favorites[0].breed}, ${resultsView.favorites[1].breed}, and ${resultsView.favorites[2].breed} are your 3 top dog breeds!`);
     resultsView.setImage(resultsView.favorites);
   };
-	
+
   resultsView.setImage = (favorites) => {
     favorites.forEach((x, i) => {
       $.get(`https://dog.ceo/api/breed/${x.breed}/images/random`)
         .then(results => {
-          $(`.result-dog-breed-${i}`).text(`${x.breed.charAt(0).toUpperCase()}${x.breed.split('').slice(1).join('')}`);
+          resultsView.favorites[i].breedName = `${x.breed.charAt(0).toUpperCase()}${x.breed.split('').slice(1).join('')}`;
+          $(`.result-dog-breed-${i}`).text(x.breedName);
           $(`.result-dog-${i}`).attr('src', results.message);
         });
     });
