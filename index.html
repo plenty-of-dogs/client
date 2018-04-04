@@ -37,7 +37,7 @@
 </head>
 <body>
   <header>
-    <h1>Plenty of D<span class="icon-paw"></span>gs</h1>
+    <a href="/"><h1>Plenty of D<span class="icon-paw"></span>gs</h1></a>
     <nav class="main-nav" >
       <div class="icon-menu" onclick="void(0)" ></div>
       <ul>
@@ -61,7 +61,9 @@
       <h2>Breed Selector</h2>
       <p class="clicks"></p>
       <ul id="images-wrapper">
+        <li><h2 class="dog-left-name"></h2></li>
         <li><img class="dog-left" src=""></li>
+        <li><h2 class="dog-right-name"></h2></li>
         <li><img class="dog-right" src=""></li>
       </ul>
     </section>
@@ -99,7 +101,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
   
   <script src="scripts/models/breed.js"></script>
-  <script src="scripts/models/dogs.js"></script>
+  <script src="scripts/models/matches.js"></script>
 
   <script src="scripts/views/home-view.js"></script>
   <script src="scripts/views/load-view.js"></script>
