@@ -4,8 +4,9 @@ var app = app || {};
 const ENV = {};
 ENV.isProduction = window.location.protocol === 'https:';
 ENV.productionApiURL = 'https://plenty-of-dogs.github.io/client/';
-ENV.developmentApiUrl = 'localhost:3000'; 
+ENV.developmentApiUrl = 'localhost:3000';
 ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
+console.log('environment url ', ENV.apiURL);
 
 
 (function(module) {
@@ -16,7 +17,7 @@ ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
 
   Breed.all = [];
 
-  // This retreives all dog-breed pics.
+  // This retrieves all dog-breed pics.
   Breed.fetchAll = limit => {
     if (localStorage.randomDogImages) {
       Breed.all = JSON.parse(localStorage.getItem('randomDogImages'));

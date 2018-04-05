@@ -12,7 +12,7 @@ page('/breed-selector', ctx => {
   app.Breed.fetchAll(75);
 });
 page('/results', app.resultsView.init);
-page('/user', app.userView.init); 
+page('/user', app.userView.init);
 
 page('/matches', ctx => {
   app.loadView.init();
