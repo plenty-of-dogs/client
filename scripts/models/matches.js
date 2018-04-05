@@ -29,7 +29,7 @@ app = app || {};
     this.email = rawDataObj.email.$t;
     this.shelterId = rawDataObj.id.$t;
     this.zip = rawDataObj.zip.$t;
-  }
+  };
 
   Matches.all = [];
   Matches.allShelters = [];
