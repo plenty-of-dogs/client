@@ -18,6 +18,6 @@ page('/matches', ctx => {
   app.loadView.init();
   app.Matches.fetchShelters();
   app.Matches.fetchAll(app.resultsView.favorites.length);
-})
+});
 
 page();
