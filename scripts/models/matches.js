@@ -38,7 +38,7 @@ app = app || {};
     doggos.sort((a, b) => {
       return (a.shelterId > b.shelterId) ? -1 : (b.shelterId > a.shelterId) ? 1 : 0;
     });
-    Matches.all = doggos.map(ele => new Matches(ele));
+    doggos.forEach(ele => Matches.all.push(new Matches(ele)));
   };
 
   Matches.fetchAll = (limit) => {
@@ -58,7 +58,7 @@ app = app || {};
 
   Matches.loadShelters = (shelters) => {
     Matches.allShelters = shelters.map(ele => new Matches.Shelters(ele));
-  }
+  };
 
   Matches.fetchShelters = () => {
     $.getJSON(`http://api.petfinder.com/shelter.find?format=json&key=3d091dff8b5bcf18c825930adc9b0f9e&location=Seattle,WA&callback=?`)
