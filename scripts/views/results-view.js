@@ -14,12 +14,49 @@ var app = app || {};
     // $('#results-view').text(`${resultsView.favorites[0].breed}, ${resultsView.favorites[1].breed}, and ${resultsView.favorites[2].breed} are your 3 top dog breeds!`);
     resultsView.setImage(resultsView.favorites);
   };
-
   resultsView.setImage = (favorites) => {
     favorites.forEach((x, i) => {
       $.get(`https://dog.ceo/api/breed/${x.breed}/images/random`)
         .then(results => {
           resultsView.favorites[i].breedName = `${x.breed.charAt(0).toUpperCase()}${x.breed.split('').slice(1).join('')}`;
+          switch (x.breedName) {
+          case 'Germanshepherd': 
+            x.breedName = 'German Shepherd Dog';
+            break;
+          case 'Collie':
+            x.breedName = 'Border Collie';
+            break;
+          case 'Bulldog':
+            x.breedName = 'French Bulldog';
+            break;
+          case 'Dane':
+            x.breedName = 'Great Dane';
+            break;
+          case 'Deerhound':
+            x.breedName = 'Scottish Deerhound';
+            break;
+          case 'Elkhound':
+            x.breedName = 'Norwegian Elkhound';
+            break;
+          case 'Pinscher':
+            x.breedName = 'Miniature Pinscher';
+            break;
+          case 'Doberman':
+            x.breedName = 'Doberman Pinscher';
+            break;
+          case 'Ridgeback':
+            x.breedName = 'Rhodesian Ridgeback';
+            break;
+          case 'Sheepdog':
+            x.breedName = 'Sheep Dog';
+            break;
+          case 'Springer':
+            x.breedName = 'Spaniel';
+            break;
+          case 'Wolfhound':
+            x.breedName = 'Irish Wolfhound';
+            break;
+          }
           $(`.result-dog-breed-${i}`).text(x.breedName);
           $(`.result-dog-${i}`).attr('src', results.message);
         });
