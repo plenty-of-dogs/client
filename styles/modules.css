@@ -5,18 +5,49 @@
 
 #selector-view img {
     width: 100%;
-    max-height: 80vw;
-    margin-bottom: 2vw;
+    max-height: 100vw;
     border: 2vw groove #f95759;
     box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
-    min-width: 260px;
+    min-width: 400px;
 }
 
-#images-wrapper li {
+#images-wrapper > li {
     display: inline-block;
-    width: 80%;
+    width: 40%;
     margin-right: 10vw;
-    padding-bottom: 2vw;
+    /* padding-bottom: 2vw; */
+    min-height: 450px;
+  }
+
+  @media only screen and (min-width: 640px) {
+    #selector-view .clicks {
+        margin-bottom: 2vw;
+    }
+    #selector-view img {
+        width: 10%;
+        height: 10%;
+        max-height: 10%;
+        margin-bottom: 0;
+        border: 1vw groove #f95759;
+        min-width: 260px;
+    }
+    #images-wrapper {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #images-wrapper > li {
+        display: inline-block;
+        position: inherit;
+        width: 40%;
+        height: 20%;
+        margin: 0;
+        padding: 0;
+      }
+      #images-wrapper * img {
+        height: 300px;
+        width: 300px;
+      }
   }
 
 
@@ -58,4 +89,18 @@
 /************************* Matches View *************************/
 .details-view li{
     font-size: 1em;
+}
+
+/************************* Load View *************************/
+
+#load-view {
+    text-align: center;
+}
+
+#load-view iframe {
+    max-height: 80vw;
+    margin-bottom: 2vw;
+    border: 2vw groove #f95759;
+    box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
+    min-width: 260px;
 }
