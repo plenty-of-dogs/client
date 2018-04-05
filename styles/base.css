@@ -61,9 +61,12 @@ a, [class^="icon-"] {
 }
 
 footer {
-  border-top: 0.4em groove #2ca4f3;
+  border-top: 0.4em groove #36454f;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  position: relative;
   height: 75px;
   width: 100%;
   background-color: #F9D059;

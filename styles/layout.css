@@ -4,6 +4,7 @@
   position: absolute;
   top: 0em;
   right: 0em;
+  cursor: pointer;
 }
 
 .main-nav ul {
@@ -18,6 +19,15 @@
 .main-nav:hover ul {
   display: inherit;
 } 
+
+#home-view {
+  background-image: url(/img/birddog.png);
+  width:100%;
+  height: 520px;
+  background-repeat: no-repeat;
+  padding: 0;
+  padding-top:2vw;
+}
 
 #images-wrapper li {
   display: inline-block;
