@@ -61,15 +61,14 @@ a, [class^="icon-"] {
   text-decoration: none;
 }
 
-body {
-  /* background-color: #77C9D4; */
-}
-
 footer {
   border-top: 0.4em groove #36454f;
-  position: relative;
-  height: 75px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
+  /* height: 75px;
+  width: 100%; */
   background-color: #F9D059
 }
 
