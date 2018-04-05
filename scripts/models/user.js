@@ -2,11 +2,12 @@
 var app = app || {};
 
 const ENV = {};
-ENV.isProduction = window.location.protocol === 'https:';
-ENV.productionApiURL = 'https://plenty-of-dogs.herokuapp.com';
-ENV.developmentApiUrl = 'http://localhost:3000';
-ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
-console.log('environment url ', ENV.apiURL);
+// ENV.isProduction = window.location.protocol === 'https:';
+// ENV.productionApiURL = 'https://plenty-of-dogs.herokuapp.com';
+// ENV.developmentApiUrl = 'http://localhost:3000';
+// ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
+// console.log('environment url ', ENV.apiURL);
+ENV.apiUrl = 'https://plenty-of-dogs.herokuapp.com';
 
 (function(module) {
 
