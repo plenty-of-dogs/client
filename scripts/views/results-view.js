@@ -10,7 +10,9 @@ var app = app || {};
     $('.container').hide();
     $('#results-view').fadeIn('slow');
     resultsView.favorites = module.homeView.voteCounter.sort((a, b) => b.vote - a.vote).slice(0, 3);
-    localStorage.setItem('voteCounter', JSON.stringify(module.homeView.voteCounter));
+    // localStorage.setItem('voteCounter', JSON.stringify(module.homeView.voteCounter));
+    module.User.all.vote_counter = JSON.stringify(module.homeView.voteCounter);
+    module.User.updateUser(module.User.all);
     resultsView.setImage(resultsView.favorites);
   };
   resultsView.setImage = (favorites) => {
@@ -19,7 +21,7 @@ var app = app || {};
         .then(results => {
           resultsView.favorites[i].breedName = `${x.breed.charAt(0).toUpperCase()}${x.breed.split('').slice(1).join('')}`;
           switch (x.breedName) {
-          case 'Germanshepherd': 
+          case 'Germanshepherd':
             x.breedName = 'German Shepherd Dog';
             break;
           case 'Collie':

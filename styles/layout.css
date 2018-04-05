@@ -26,6 +26,10 @@
   padding-bottom: 2vw;
 }
 
+.user {
+  display: none;
+}
+
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
@@ -36,5 +40,8 @@
   .main-nav ul li {
     display: inline;
     font-size: 1.5em;
+  }
+  .user {
+    display: none;
   }
 }
