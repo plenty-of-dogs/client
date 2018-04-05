@@ -15,7 +15,7 @@ var app = app || {};
     });
     if (matches.shelterName === '' || matches.shelterName === undefined) {
       matches.shelterName = 'Sorry, we could not find the name of this shelter.';
-    };
+    }
     return template(matches);
   };
 
