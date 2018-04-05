@@ -14,6 +14,10 @@ page('/breed-selector', ctx => {
 page('/results', app.resultsView.init);
 page('/user', app.userView.init);
 
-// page('/matches', ctx => )
+page('/matches', ctx => {
+  app.loadView.init();
+  app.Matches.fetchShelters();
+  app.Matches.fetchAll(app.resultsView.favorites.length);
+})
 
 page();

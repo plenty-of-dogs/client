@@ -15,18 +15,26 @@
   <script id="matches-view-template" type="text/x-handlebars-template">
     <article class="match">
       <!-- carousel of images -->
-      <h1>{{name}}</h1>
-      <h2>{{breed}}</h2>
+      <h2>{{name}}</h2>
       <div class="details-view">
         <ul>
+          <li>{{breed}}</li>
           <li>{{age}}</li>
           <li>{{sex}}</li>
           <li>{{size}}</li>
         </ul>
-        <h2>About</h2>
+        <h3>About</h3>
         <p>{{description}}</p>
-        <h2>Contact Info</h2>
-        <ul class="{{shelterId}}"></ul>
+        <h3>Contact Info</h3>
+        <ul class="{{shelterId}}">
+          <li>{{shelterName}}</li>
+          <li>{{address}}</li>
+          <li>{{city}}</li>
+          <li>{{state}}</li>
+          <li>{{zip}}</li>
+          <li>{{phone}}</li>
+          <li>{{email}}</li>
+        </ul>
       </div>
     </article>
   </script>
@@ -102,16 +110,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
   
   <script src="scripts/models/breed.js"></script>
-  <script src="scripts/models/matches.js"></script>
   <script src="scripts/models/user.js"></script>
   <script src="scripts/views/home-view.js"></script>
   <script src="scripts/views/load-view.js"></script>
   <script src="scripts/views/selector-view.js"></script>
   <script src="scripts/views/about-view.js"></script>
   <script src="scripts/views/user-view.js"></script>
-  <script src="scripts/views/matches-view.js"></script>
   <script src="scripts/views/results-view.js"></script>
-
+  <script src="scripts/models/matches.js"></script>
+  <script src="scripts/views/matches-view.js"></script>
+  
   <script src="scripts/controllers/routes.js"></script>
 
   <script>
