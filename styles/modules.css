@@ -255,8 +255,6 @@
 
 /************************* About View *************************/
 
-
-
 .team-doggo-bios {
   display: none;
   position: absolute;
@@ -266,7 +264,7 @@
   text-align: left;
   overflow: visible;
   padding: 0.5vw;
-  height: 35vw;
+  height: 25vw;
   width: 18vw;
   font-size: 1.4vw;
 }
@@ -276,11 +274,6 @@
       max-height: 100vw;
       min-width: 400px; 
 }   
-
-/* #mike {
-  top: 0vw;
-  right: 0vw;
-} */
 
 #mikeSelector {
   position: absolute;
@@ -294,11 +287,6 @@
   display: block;
 }
 
-/* #jimmy {
-  bottom: 0vw;
-  right: 0vw;
-} */
-
 #jimmySelector {
   position: absolute;
   height: 10vw;
@@ -311,11 +299,6 @@
   display: block;
 }
 
-/* #cara {
-  top: 0vw;
-  left: 0vw;
-} */
-
 #caraSelector {
   position: absolute;
   height: 10vw;
@@ -327,11 +310,6 @@
 #caraSelector:hover + #cara {
   display: block;
 }
-
-/* #daniel {
-  bottom: 0vw;
-  left: 0vw;
-} */
 
 #danielSelector {
   position: absolute;
@@ -347,7 +325,7 @@
 
 .team-doggo-bios {
   top: 13vw;
-  height: 15%;
+  height: 10%;
   width: 100%;
   font-size: 2.3vw;
 }
@@ -367,6 +345,4 @@
     width: 100%;
     font-size: 2.3vw;
   }
-
-
 }
