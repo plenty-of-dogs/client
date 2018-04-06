@@ -34,7 +34,7 @@ var app = app || {};
   matchesView.init = () => {
     $('.container').hide();
     $('#matches-view').fadeIn('slow');
-    module.Matches.all.forEach(x => $('#matches-view').append(matchesView.render(x)))
+    module.Matches.all.forEach(x => $('#matches-view').append(matchesView.render(x)));
     // setInterval(matchesView.carousel, 2000);
   };
 

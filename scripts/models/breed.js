@@ -1,14 +1,6 @@
 'use strict';
 var app = app || {};
 
-const ENV = {};
-ENV.isProduction = window.location.protocol === 'https:';
-ENV.productionApiURL = 'https://plenty-of-dogs.github.io/client/';
-ENV.developmentApiUrl = 'localhost:3000';
-ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
-console.log('environment url ', ENV.apiURL);
-
-
 (function(module) {
 
   //setting up the random images
