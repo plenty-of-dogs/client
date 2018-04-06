@@ -18,6 +18,7 @@ app = app || {};
     this.email = rawDataObj.contact.email.$t;
     this.zip = rawDataObj.contact.zip.$t;
     this.shelterName = '';
+    this.id = rawDataObj.id.$t;
   }
 
   Matches.Shelters = function(rawDataObj) {

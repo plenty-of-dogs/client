@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky">
     <script id="matches-view-template" type="text/x-handlebars-template">
       <article class="match">
-        <img class="carousel" src="{{image}}">       
+        <img class="carousel" src="{{image}}">
           <h2>{{name}}</h2>
+          <p>{{noImage}}</p>
           <ul>
             <li>{{breed}}</li>
             <li>{{age}}</li>
@@ -46,7 +47,8 @@
     <body>
       <header>
         <a href="/"><h1>Plenty of D<span class="icon-paw"></span>gs</h1></a>
-        <img class="logo" src="img/puppy.png" alt="Plenty of Dogs logo" title="Plenty of Dogs logo">
+        <a href="https://www.petfinder.com/dog/ziggy-41247577/wa/seattle/washington-german-shepherd-rescue-wa214/"><img class="logo" src="img/puppy.png" alt="Plenty of Dogs logo" title="Plenty of Dogs logo"></a>
+        <a href="https://www.petfinder.com/"><img alt="To Petfinder.com" title="To Petfinder.com"src="img/petfinder-logo.PNG"></a>
         <nav class="main-nav" >
           <div class="icon-menu" onclick="void(0)" ></div>
           <ul class="nav-list">
@@ -90,8 +92,12 @@
     <section id="user-view" class="container">
       <form id="log-in-form">
         <input type="text" id="username" placeholder="username">
-        <input type="text" id="passphrase" placeholder="password">
+        <input type="password" id="passphrase" placeholder="password">
         <button type="submit" class="login-button">Login</button>
+      </form>
+      <form id="create-user-form">
+        <input type="text" id="create-username" placeholder="username">
+        <input type="password" id="create-passphrase" placeholder="password">
         <button type="submit" class="create-user-button">Create Account</button>
       </form>
     </section>
@@ -109,11 +115,6 @@
       <h2>(hover over to meet the team)</h2>
     </section>
   </main>
-  
-  <footer>
-    <p class="copyright">&copy; Plenty of D<span class="icon-paw"></span>gs</p>
-    <a href="https://www.petfinder.com/"><img alt="To Petfinder.com" title="To Petfinder.com"src="img/petfinder-logo.PNG"></a>
-  </footer>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>

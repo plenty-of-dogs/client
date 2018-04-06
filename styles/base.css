@@ -34,6 +34,15 @@ header {
   margin: 0.5em 0.5em 0em 0em;
 }
 
+header img {
+  display: none;
+  float: right;
+  margin-top: 1vw;
+  margin-right: 1vw;
+  border-radius: 50%;
+  width: 10em;
+}
+
 h1 {
   font-size: 2em;
   margin: 0.3em;
@@ -68,7 +77,7 @@ a, [class^="icon-"] {
 
 footer {
   border-top: 0.4em groove #36454f;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -86,12 +95,6 @@ footer .copyright {
   font-size: 1.5em;
 }
 
-footer img {
-  float: right;
-  border-radius: 50%;
-  width: 10em;
-}
-
 .github {
   height: 25%;
   float: right;
@@ -100,10 +103,6 @@ footer img {
 }
 
 @media only screen and (min-width: 640px) {
-
-  main {
-    min-height: 1150px;
-  }
 
   h1 {
     font-size: 2.5em;
@@ -114,16 +113,6 @@ footer img {
   ul li {
     font-size: 1vw;
   }
-  footer p {
-    left: 2%;
-    bottom: 5%;
-    font-size: 1.5em;
-  }
-  footer ul {
-    right: 2%;
-    bottom: 5%;
-  }
-  footer * li {
-    font-size: 1.4em;
-  }
+
+
 } 
