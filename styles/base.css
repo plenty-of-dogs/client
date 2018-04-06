@@ -1,22 +1,29 @@
 * {
   box-sizing: border-box;
-  outline: 1px dashed red;
   font-family: 'Fontdiner Swanky', cursive;
+}
+
+main #home-view { 
+  min-height: 800px;
+  background: url(/img/birddog.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
   background: linear-gradient(to bottom right, #77C9D4,#57BC90);
-  height: 100%;
-  margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-width: 480px;
+  margin: 0;
+  height: 100%;
 }
 
 header {
   background-color: #F9D059;
-  box-sizing: border-box;
   border-bottom: 0.4em groove #36454f;
+  width: 100%;
 }
 
 .logo {
@@ -25,7 +32,6 @@ header {
   float: right;
   width: 5em;
   margin: 0.5em 0.5em 0em 0em;
-
 }
 
 h1 {
@@ -44,7 +50,7 @@ nav {
   margin:0em;
 }
 
-ul {
+.main-nav ul {
   padding-left: 0em;
 }
 
@@ -74,32 +80,23 @@ footer {
   margin-top: 2vw;
 }
 
-footer p {
-  position: absolute;
+footer .copyright {
   float: left;
-  left: 0.5em;
-  bottom: 0.75em;
+  margin-top: 1em;
+  font-size: 1.5em;
 }
 
 footer img {
+  float: right;
   border-radius: 50%;
   width: 10em;
 }
 
-footer > ul {
-  float: left;
-  position: absolute;
-  height: 100%;
-  right: 0;
-  top: 0;
-  margin-top: 1em;
-}
-
-footer > li {
-  list-style: none;
-  width: 100%;
-  font-size: 10em;
+.github {
   height: 25%;
+  float: right;
+  margin-top: 1em;
+  font-size: 1.5em;
 }
 
 @media only screen and (min-width: 640px) {

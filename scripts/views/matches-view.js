@@ -20,22 +20,10 @@ var app = app || {};
     return template(matches);
   };
 
-  // matchesView.carousel = () => {
-  //   let i = $('.carousel').attr('src').match(/\/(\d)\//)[1];
-  //   if (i === 5) {
-  //     i = 0;
-  //     $('.carousel').attr('src', $('.carousel').attr('src').replace(/\/(\d)\//, `/${i}/`));
-  //   } else {
-  //     i ++;
-  //     $('.carousel').attr('src', $('.carousel').attr('src').replace(/\/(\d)\//, `/${i}/`));
-  //   }
-  // };
-
   matchesView.init = () => {
     $('.container').hide();
     $('#matches-view').fadeIn('slow');
     module.Matches.all.forEach(x => $('#matches-view').append(matchesView.render(x)));
-    // setInterval(matchesView.carousel, 2000);
   };
 
   module.matchesView = matchesView;

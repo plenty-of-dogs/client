@@ -3,7 +3,6 @@ var app = app || {};
 
 (function(module) {
 
-  //setting up the random images
   function Breed () {
   }
 
@@ -25,8 +24,6 @@ var app = app || {};
       module.selectorView.init();
     }
   };
-
-
 
   module.Breed = Breed;
 })(app);

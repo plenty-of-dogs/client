@@ -2,11 +2,6 @@
 var app = app || {};
 
 const ENV = {};
-// ENV.isProduction = window.location.protocol === 'https:';
-// ENV.productionApiURL = 'https://plenty-of-dogs.herokuapp.com';
-// ENV.developmentApiUrl = 'http://localhost:3000';
-// ENV.apiURL = ENV.isProduction ? ENV.productionApiURL : ENV.developmentApiUrl;
-// console.log('environment url ', ENV.apiURL);
 ENV.apiUrl = 'https://plenty-of-dogs.herokuapp.com';
 
 (function(module) {
@@ -21,8 +16,6 @@ ENV.apiUrl = 'https://plenty-of-dogs.herokuapp.com';
     event.preventDefault();
     $.get(`${ENV.apiUrl}/api/v1/users`)
       .then(results => {
-        console.log(results);
-        console.log($('#username').val());
         results.forEach(login => {
           if (login.username === $('#username').val() && login.password === $('#passphrase').val()) {
             User.all = new User(login);
@@ -30,7 +23,8 @@ ENV.apiUrl = 'https://plenty-of-dogs.herokuapp.com';
               module.homeView.voteCounter = JSON.parse(User.all.vote_counter);
               $('.user').show();
             }
-            console.log(login);
+            $('#username').val('');
+            $('#passphrase').val('');
             page('/');
           }
         });
