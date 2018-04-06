@@ -1,42 +1,68 @@
+/************************* Home View *************************/
+
+#home-view .intro-page {
+    text-align: center;
+    max-width: 200px;
+}
+
+#home-view p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em; 
+    color: white;
+    margin-top: 5em;
+}
+
+#home-view button{
+    font-size: 1.5em;
+}
+
 /************************* Selector View *************************/
+
 #selector-view {
     text-align: center;
 }
 
 #selector-view img {
-    width: 100%;
-    max-height: 100vw;
+    width: 80%;
+    margin-bottom: 2vw;
     border: 2vw groove #f95759;
     box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
-    min-width: 400px;
+    min-width: 260px;
 }
 
-#images-wrapper > li {
-    display: inline-block;
-    width: 40%;
-    margin-right: 10vw;
-    /* padding-bottom: 2vw; */
-    min-height: 450px;
+#images-wrapper li {
+    display: block;
+    width: 80%;
+    padding-bottom: 2vw;
   }
 
-  @media only screen and (min-width: 640px) {
+#images-wrapper {
+    margin-left: 10vw;
+}
+
+  @media only screen and (min-width: 700px) {
     #selector-view .clicks {
         margin-bottom: 2vw;
     }
+    #selector-view h2 {
+        font-size: 4vw;
+    }
+    #selector-view .clicks {
+        font-size: 2vw;
+    }
     #selector-view img {
-        width: 10%;
-        height: 10%;
-        max-height: 10%;
+        width: 30vw;
+        max-width: 400px;
         margin-bottom: 0;
         border: 1vw groove #f95759;
-        min-width: 260px;
     }
     #images-wrapper {
-        position: relative;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
+        padding: 0;
+        max-width: 1300px;
     }
-    #images-wrapper > li {
+    #images-wrapper li {
         display: inline-block;
         position: inherit;
         width: 40%;
@@ -44,12 +70,7 @@
         margin: 0;
         padding: 0;
       }
-      #images-wrapper * img {
-        height: 300px;
-        width: 300px;
-      }
-  }
-
+    } 
 
 /************************* Results View *************************/
 #results-view {
@@ -62,7 +83,7 @@
     border: 2vw groove #f95759;
     box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
     min-width: 260px;
-  }
+}
 
 #results-view p {
     font-size: 2em;
@@ -81,14 +102,141 @@
     box-shadow: 1vw 1vw 0.5vw 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 7vw;
 }
+
 #results-view a {
     font-size: 2em;
     min-width: 40%;
 }
 
+@media only screen and (min-width: 700px) {
+    #results-view p {
+        font-size: 3em;
+        margin: 2vw;   
+    }
+    #results-view ul {
+        width: 100%;
+        max-width: 1460px;   
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+    }
+    #results-view li{
+        display: inline-block;
+        position: inherit;
+        width: 20%;
+        padding: 0;
+    }
+    #results-view li:nth-child(2){
+        margin: 0 13vw;
+    }
+    #results-view h2 {
+        font-size: 40px;
+        max-width: 400px;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+    #results-view img {
+        width: 20vw;
+        max-width: 350px;
+        max-height: 350px;
+        margin-bottom: 0;
+        border: 1vw groove #f95759;
+    }
+    #results-view button {
+        margin: 2vw;
+    }
+}
+
 /************************* Matches View *************************/
+
+#matches-view {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+#matches-view ul {
+    padding: 0;
+}
+
+#matches-view .match {
+    float: left;
+    background-color: #015249;
+    width: 40%;
+    margin-left: 6vw;
+    margin-top: 2vw;
+    display: inline-block;
+    border-radius: 2%;
+    padding: 0.3em;
+}
+
+.match * {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    border-radius: 2%;
+}
+
+#matches-view img {
+    width: 80%; 
+    margin-top: 1em;
+}
+
+#matches-view li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#matches-view h3 {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+#matches-view li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#matches-view p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.details-view {
+    display: none;
+}
+
+.match:hover .details-view {
+    display: block;
+}
+
 .details-view li{
     font-size: 1em;
+}
+
+@media only screen and (min-width: 700px) {
+    #matches-view {
+        width: 90%;
+        margin: 0 10vw;
+    }
+    #matches-view .match {
+        display: block;
+        width: 20%;
+        margin-left: 2vw;
+        height: 40vw;
+        overflow: auto;
+    }
+    #matches-view h2 {
+        font-size: 2em;
+    }
+    .details-view {
+        display: block;
+    }
+}
+
+/************************* User View *************************/
+
+#log-in-form * {
+    font-size: 2em;
+    margin-top: 4em;
+    margin-left: 0.5em;
 }
 
 /************************* Load View *************************/
