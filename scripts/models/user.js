@@ -28,6 +28,8 @@ ENV.apiUrl = 'https://plenty-of-dogs.herokuapp.com';
             page('/');
           }
         });
+        module.resultsView.favorites = module.homeView.voteCounter.slice(0, 3);
+        module.resultsView.setImage(module.resultsView.favorites);
         if (callback) callback();
       })
       .catch(console.error);
@@ -36,14 +38,17 @@ ENV.apiUrl = 'https://plenty-of-dogs.herokuapp.com';
   //build createUser here
   User.createUser = (event, callback) => {
     event.preventDefault();
-    $.post(`${ENV.apiUrl}/api/v1/users`)
+    $.post(`${ENV.apiUrl}/api/v1/users`, {username: $('#create-username').val(), password: $('#create-passphrase').val()})
       .then(() => {
-        page('/');
         if (callback) callback();
+        $('#create-username').val('');
+        $('#create-passphrase').val('');
+        page('/user');
       });
   };
 
   User.updateUser = (user, callback) => {
+    User.all.vote_counter = JSON.stringify(module.homeView.voteCounter);
     $.ajax({
       url: `${ENV.apiUrl}/api/v1/users/${user.user_id}`,
       method: 'PUT',

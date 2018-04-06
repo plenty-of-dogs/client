@@ -25,7 +25,7 @@ var app = app || {};
     module.homeView.voteCounter.forEach(x => {
       if (x.breed === matchedBreed) x.vote += 1;
     });
-    if (selectorView.clickCounter === selectorView.gameCounter) {
+    if (selectorView.clickCounter >= selectorView.gameCounter) {
       selectorView.clickCounter = 0;
       module.resultsView.init();
     }

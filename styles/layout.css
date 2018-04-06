@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+.user {
+  display: none;
+}
+
 .main-nav ul {
   display: none;
 }
@@ -24,7 +28,7 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .logo {
+  .logo, header img {
     display: block;
   }
   .icon-menu {
@@ -37,7 +41,5 @@
     display: inline;
     font-size: 1.5em;
   }
-  .user {
-    display: none;
-  }
+
 }
