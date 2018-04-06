@@ -20,4 +20,6 @@ page('/matches', ctx => {
   app.Matches.fetchAll(app.resultsView.favorites.length);
 })
 
+page('/about', app.aboutView.init);
+
 page();

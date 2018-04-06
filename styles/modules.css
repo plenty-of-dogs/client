@@ -104,3 +104,121 @@
     box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
     min-width: 260px;
 }
+
+/************************* About View *************************/
+
+
+
+.team-doggo-bios {
+  display: none;
+  position: absolute;
+  background: wheat;
+  border: 0.1vw solid #984B43;
+  box-shadow: 0.4vw 0.5vw #000000;
+  text-align: left;
+  overflow: visible;
+  padding: 0.5vw;
+  height: 35vw;
+  width: 18vw;
+  font-size: 1.4vw;
+}
+
+#about-view img {
+      width: 100%;
+      max-height: 100vw;
+      min-width: 400px; 
+}   
+
+/* #mike {
+  top: 0vw;
+  right: 0vw;
+} */
+
+#mikeSelector {
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  top: 43.5vw;
+  right: 16vw;
+}
+
+#mikeSelector:hover + #mike {
+  display: block;
+}
+
+/* #jimmy {
+  bottom: 0vw;
+  right: 0vw;
+} */
+
+#jimmySelector {
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  top: 55vw;
+  right: 40vw;
+}
+
+#jimmySelector:hover + #jimmy {
+  display: block;
+}
+
+/* #cara {
+  top: 0vw;
+  left: 0vw;
+} */
+
+#caraSelector {
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  top: 43vw;
+  left: 43vw;
+}
+
+#caraSelector:hover + #cara {
+  display: block;
+}
+
+/* #daniel {
+  bottom: 0vw;
+  left: 0vw;
+} */
+
+#danielSelector {
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  top: 43vw;
+  right: 67vw;
+}
+
+#danielSelector:hover + #daniel {
+  display: block;
+}  
+
+.team-doggo-bios {
+  top: 13vw;
+  height: 15%;
+  width: 100%;
+  font-size: 2.3vw;
+}
+
+#demi-dog {
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  top: 83vw;
+  right: 60vw;
+}
+
+@media only screen and (min-width: 640px) {
+  .team-doggo-bios {
+    top: 13vw;
+    height: 40%;
+    width: 100%;
+    font-size: 2.3vw;
+  }
+
+
+}
