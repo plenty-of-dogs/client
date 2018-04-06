@@ -51,8 +51,7 @@
         font-size: 2vw;
     }
     #selector-view img {
-        width: 30vw;
-        max-width: 400px;
+        height: 30vw;
         margin-bottom: 0;
         border: 1vw groove #f95759;
     }
@@ -91,6 +90,7 @@
 }
 
 #results-view h2 {
+    text-align: center;
     margin-bottom: 2vw;
     text-decoration: underline;
 }
@@ -126,6 +126,9 @@
         width: 20%;
         padding: 0;
     }
+    #results-view li:first-child {
+        margin-left: 6vw;
+    }
     #results-view li:nth-child(2){
         margin: 0 13vw;
     }
@@ -136,9 +139,8 @@
         margin-bottom: 0.5em;
     }
     #results-view img {
-        width: 20vw;
-        max-width: 350px;
-        max-height: 350px;
+        width: auto;
+        height: 15vw;
         margin-bottom: 0;
         border: 1vw groove #f95759;
     }
