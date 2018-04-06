@@ -6,7 +6,7 @@ var app = app || {};
 
 // the game
   let selectorView = {};
-  selectorView.gameCounter = 5;
+  selectorView.gameCounter = 10;
   selectorView.clickCounter = 0;
 
   selectorView.init = () => {
@@ -38,7 +38,7 @@ var app = app || {};
 
   selectorView.randomBreeds = [];
   selectorView.randomPic = () => {
-    while(selectorView.randomBreeds.length < 3) {
+    while(selectorView.randomBreeds.length < 30) {
       let randomNum = selectorView.generateRandom();
       while(!selectorView.randomBreeds.includes(randomNum)) {
         selectorView.randomBreeds.push(randomNum);

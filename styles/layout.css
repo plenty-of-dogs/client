@@ -28,7 +28,7 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .logo, header img {
+  .logo, .petfinder {
     display: block;
   }
   .icon-menu {

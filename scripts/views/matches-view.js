@@ -25,6 +25,7 @@ var app = app || {};
     $('#matches-view').text('');
     $('#matches-view').fadeIn('slow');
     module.Matches.all.forEach(x => $('#matches-view').append(matchesView.render(x)));
+    module.Matches.all = [];
   };
 
   module.matchesView = matchesView;
