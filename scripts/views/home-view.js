@@ -10,11 +10,7 @@ var app = app || {};
   homeView.init = () => {
     $('.container').hide();
     $('#home-view').fadeIn('slow');
-    if (localStorage.voteCounter) {
-      homeView.voteCounter = [];
-      // homeView.voteCounter = JSON.parse(localStorage.getItem('voteCounter'));
-      localStorage.removeItem('voteCounter');
-    } else if (homeView.voteCounter.length === 0) {
+    if (homeView.voteCounter.length === 0) {
       $.get('https://dog.ceo/api/breeds/list')
         .then(results => {
           results.message.forEach(x => {

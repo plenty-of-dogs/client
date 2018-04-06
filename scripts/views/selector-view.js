@@ -32,7 +32,6 @@ var app = app || {};
     selectorView.randomPic();
   });
 
-
   selectorView.generateRandom = () => {
     return Math.floor(Math.random() * module.Breed.all.length);
   };
@@ -47,8 +46,6 @@ var app = app || {};
     }
     let tempLeft = selectorView.randomBreeds.shift();
     let tempRight = selectorView.randomBreeds.shift();
-    $('.dog-left-name').text(module.Breed.all[tempLeft].message.match(/img\/(\w+)/)[1]);
-    $('.dog-right-name').text(module.Breed.all[tempRight].message.match(/img\/(\w+)/)[1]);
     $('.dog-left').attr('src', module.Breed.all[tempLeft].message);
     $('.dog-right').attr('src', module.Breed.all[tempRight].message);
   };

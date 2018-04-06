@@ -10,7 +10,6 @@ var app = app || {};
     $('.container').hide();
     $('#results-view').fadeIn('slow');
     resultsView.favorites = module.homeView.voteCounter.sort((a, b) => b.vote - a.vote).slice(0, 3);
-    // localStorage.setItem('voteCounter', JSON.stringify(module.homeView.voteCounter));
     module.User.all.vote_counter = JSON.stringify(module.homeView.voteCounter);
     module.User.updateUser(module.User.all);
     resultsView.setImage(resultsView.favorites);
