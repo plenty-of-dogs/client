@@ -1,7 +1,8 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: 'Fontdiner Swanky', cursive;
-}
+  outline: 1px dashed red;
+} */
 
 main #home-view { 
   min-height: 800px;
