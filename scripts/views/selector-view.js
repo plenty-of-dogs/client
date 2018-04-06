@@ -6,7 +6,7 @@ var app = app || {};
 
 // the game
   let selectorView = {};
-  selectorView.gameCounter = 5;
+  selectorView.gameCounter = 10;
   selectorView.clickCounter = 0;
 
   selectorView.init = () => {
@@ -25,7 +25,7 @@ var app = app || {};
     module.homeView.voteCounter.forEach(x => {
       if (x.breed === matchedBreed) x.vote += 1;
     });
-    if (selectorView.clickCounter === selectorView.gameCounter) {
+    if (selectorView.clickCounter >= selectorView.gameCounter) {
       selectorView.clickCounter = 0;
       module.resultsView.init();
     }
@@ -38,7 +38,7 @@ var app = app || {};
 
   selectorView.randomBreeds = [];
   selectorView.randomPic = () => {
-    while(selectorView.randomBreeds.length < 3) {
+    while(selectorView.randomBreeds.length < 30) {
       let randomNum = selectorView.generateRandom();
       while(!selectorView.randomBreeds.includes(randomNum)) {
         selectorView.randomBreeds.push(randomNum);

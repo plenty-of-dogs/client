@@ -10,8 +10,7 @@ var app = app || {};
     $('.container').hide();
     $('#results-view').fadeIn('slow');
     resultsView.favorites = module.homeView.voteCounter.sort((a, b) => b.vote - a.vote).slice(0, 3);
-    module.User.all.vote_counter = JSON.stringify(module.homeView.voteCounter);
-    module.User.updateUser(module.User.all);
+    if (module.User.all.vote_counter !== undefined) module.User.updateUser(module.User.all);
     resultsView.setImage(resultsView.favorites);
   };
   resultsView.setImage = (favorites) => {

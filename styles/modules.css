@@ -55,8 +55,7 @@
         font-size: 2vw;
     }
     #selector-view img {
-        width: 30vw;
-        max-width: 400px;
+        height: 30vw;
         margin-bottom: 0;
         border: 1vw groove #f95759;
     }
@@ -95,6 +94,7 @@
 }
 
 #results-view h2 {
+    text-align: center;
     margin-bottom: 2vw;
     text-decoration: underline;
 }
@@ -130,6 +130,9 @@
         width: 20%;
         padding: 0;
     }
+    #results-view li:first-child {
+        margin-left: 6vw;
+    }
     #results-view li:nth-child(2){
         margin: 0 13vw;
     }
@@ -140,9 +143,8 @@
         margin-bottom: 0.5em;
     }
     #results-view img {
-        width: 20vw;
-        max-width: 350px;
-        max-height: 350px;
+        width: auto;
+        height: 15vw;
         margin-bottom: 0;
         border: 1vw groove #f95759;
     }
@@ -239,8 +241,33 @@
 
 #log-in-form * {
     font-size: 2em;
-    margin-top: 4em;
-    margin-left: 0.5em;
+    margin-top: 1em;
+    margin-left: .5em;
+    
+}
+
+.login-button {
+  font-size: 1em;
+  border-radius: 50%;
+  width: 10%;
+  margin-left: 4em;
+  margin-bottom: 2vw;
+  border: 2vw groove #f95759;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
+  min-width: 260px;
+}
+
+.create-user-button {
+  border-radius: 50%;
+  width: 10%;
+  margin-bottom: 2vw;
+  border: 2vw groove #f95759;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  box-shadow: 2vw 2vw 0.5vw 0 rgba(0, 0, 0, 0.2);
+  min-width: 260px;
 }
 
 /************************* Load View *************************/
@@ -295,8 +322,6 @@
   display: none; 
   position: absolute; 
   font-family: Arial, Helvetica, sans-serif;
-  /* border: 0.1vw solid #984B43;
-  box-shadow: 0.4vw 0.5vw #000000; */
   text-align: left;
   overflow: visible;
   padding: 0.5vw;
@@ -403,8 +428,6 @@
   display: none; 
   position: absolute; 
   font-family: Arial, Helvetica, sans-serif;
-  /* border: 0.1vw solid #984B43;
-  box-shadow: 0.4vw 0.5vw #000000; */
   text-align: left;
   overflow: visible;
   padding: 0.5vw;
